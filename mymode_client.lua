@@ -29,10 +29,11 @@ end, false)
 local menu = false
 
 CreateThread(function()
-    while true do 
+    while true do
         Wait(5)
         if(menu) then
-            DrawMenu() 
+            DrawMenu()
+            UpdateMenu()
         end
     end
 end)
