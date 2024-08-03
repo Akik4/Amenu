@@ -26,22 +26,6 @@ RegisterCommand('fastcar', function()
     SpawnVehicle('zentorno')
 end, false)
 
-local menu = false
-
-CreateThread(function()
-    while true do
-        Wait(5)
-        if(menu) then
-            DrawMenu()
-            UpdateMenu()
-        end
-    end
-end)
-
-RegisterCommand('menu', function()
-    menu = not menu
-end, false)
-
 RegisterCommand('car', function(source, args)
     SpawnVehicle(args[1])
 end, false)
